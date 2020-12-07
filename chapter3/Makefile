@@ -1,11 +1,14 @@
 CPPFLAGS = -g
 
-all: forkexec forktree zombie orphan
+all: forkexec forktree forktree_simple zombie orphan
 
 forkexec: forkexec.o 
 	$(CXX) -o $@ $^
 
 forktree: forktree.o 
+	$(CXX) -o $@ $^
+
+forktree_simple: forktree_simple.o 
 	$(CXX) -o $@ $^
 
 zombie: zombie.o
