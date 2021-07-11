@@ -1,0 +1,11 @@
+*.o
+*.a
+execute
+__pycache__
+
+# Main programs
+forkexec
+forktree
+forktree_simple
+orphan
+zombie

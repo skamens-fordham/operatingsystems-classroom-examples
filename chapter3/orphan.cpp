@@ -11,11 +11,11 @@ using namespace std;
 
 int main() 
 { 
-    cout << "Parent pid: " << getpid() << endl;
+    cout << "Parent pid: " << getpid() << ". " << "Parent of parent: " << getppid() << endl;
 
     // Create a child process       
     int pid = fork(); 
-   
+
     if (pid > 0) {
         sleep(5);
     } else if (pid == 0) 
@@ -23,9 +23,8 @@ int main()
         // We're in the child process
 
         cout << "Child pid: " << getpid() << ". Parent pid: " << getppid() << endl;
-        sleep(10); 
+        sleep(6); 
         cout << "Child pid: " << getpid() << ". Parent pid: " << getppid() << endl;
-        sleep(10);
     } 
   
     return 0; 

@@ -19,7 +19,6 @@ int main(int argc, char ** argv)
 
     for (i = 0; i < 4; ++i) {
         pid = fork();
-
         if (pid != 0) {
             cout << getpid() << setw(i * 4) << ": i= " << i << ". forked child " << pid << endl;
         }   

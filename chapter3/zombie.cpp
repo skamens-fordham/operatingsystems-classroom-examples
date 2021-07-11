@@ -14,13 +14,15 @@ int main()
   
     // Parent process  
     if (child_pid > 0) {
-        sleep(100);
+        sleep(20);
         wait(NULL);
     }
     // Child process 
     else {
         // Child will exit right away, becoming a zombie
         // until the parent waits() for it
+
+    	sleep(10);	    
         exit(0); 
     }
 
